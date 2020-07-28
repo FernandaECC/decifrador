@@ -7,8 +7,15 @@
 #define TAM_BUFFER 60
 char buffer_entrada[TAM_BUFFER];
 char buffer_saida[TAM_BUFFER];
+/*
+com o codigo do cifrador, a senha e sabendo que o cifrador eh do tipo Vigenere, a criacao de um decifrador pode ser feita de forma simples
+utilizando o proprio codigo do cifrador
 
+Para decifrar o codigo, basta pegar o primeiro alfabeto da mensagem criptografada e a chave gerada, analisar a tabela de cifra Vigenere, onde
+a linha correspondente sera o primeiro alfabeto da mensagem original e repetir o mesmo processo para todos os alfabetos na mensagem criptografada.
 
+Este processo esta descrito na funcao DECIFRADOR, principamente na linha 26 	
+*/	
 const char senha[] = "SENHASECRETA";
 
 char decifrador(char a, char b){
